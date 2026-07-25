@@ -1,0 +1,32 @@
+.adno-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.adno-value {
+  &__ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--amber-soft);
+    color: var(--amber-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.1rem;
+  }
+
+  &__t {
+    font-weight: 700;
+    font-size: 1.24rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.55rem;
+  }
+
+  &__b {
+    color: var(--ink-soft);
+    font-size: 0.99rem;
+    margin: 0;
+  }
+}

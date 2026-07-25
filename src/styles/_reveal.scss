@@ -1,0 +1,18 @@
+.adno-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adno-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

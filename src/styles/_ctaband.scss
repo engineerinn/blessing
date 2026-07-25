@@ -1,0 +1,23 @@
+.adno-ctaband {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+
+  &__t {
+    font-weight: 800;
+    font-size: clamp(1.6rem, 3vw, 2.35rem);
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    margin: 0 0 0.6rem;
+    max-width: 20ch;
+  }
+
+  &__p {
+    color: #b8cccb;
+    margin: 0;
+    max-width: 44ch;
+    font-size: 1.02rem;
+  }
+}

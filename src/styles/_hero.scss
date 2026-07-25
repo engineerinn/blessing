@@ -1,0 +1,59 @@
+.adno-hero {
+  padding-top: 66px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    padding: clamp(3rem, 6vw, 5.5rem) 0;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: clamp(2.35rem, 5.2vw, 3.9rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    margin: 1rem 0 1.3rem;
+
+    em {
+      font-style: normal;
+      color: var(--amber-ink);
+    }
+  }
+
+  &__sub {
+    font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+    color: var(--ink-soft);
+    margin: 0 0 2rem;
+    max-width: 46ch;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__note {
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    b {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--mint);
+      display: inline-block;
+    }
+  }
+
+  &__art {
+    display: flex;
+    justify-content: center;
+  }
+}

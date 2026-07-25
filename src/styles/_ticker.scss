@@ -1,0 +1,61 @@
+.adno-ticker-sec {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--mist-bg);
+  padding: 1.7rem 0;
+}
+
+.adno-ticker-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: center;
+  margin: 0 0 1.1rem;
+}
+
+.adno-ticker {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+
+  &__track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: adnoMarquee 30s linear infinite;
+  }
+
+  &:hover .adno-ticker__track {
+    animation-play-state: paused;
+  }
+}
+
+.adno-tool {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+@keyframes adnoMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adno-ticker__track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.8rem;
+  }
+}

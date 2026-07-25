@@ -1,0 +1,28 @@
+.adno-why {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+
+  &__item {
+    border-top: 3px solid var(--petrol);
+    padding-top: 1.2rem;
+  }
+
+  &__lead {
+    font-weight: 800;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 0.6rem;
+
+    b {
+      color: var(--amber-ink);
+    }
+  }
+
+  &__b {
+    color: var(--ink-soft);
+    font-size: 0.99rem;
+    margin: 0;
+  }
+}

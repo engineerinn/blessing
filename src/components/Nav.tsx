@@ -10,9 +10,8 @@ export function Nav() {
       <div className="adno-wrap adno-nav__inner">
         <a className="adno-brand" href="#top" onClick={closeMenu}>
           <span className="adno-brand__mark">
-            adno<span>·</span>para
+            Adno<span></span>Para
           </span>
-          <span className="adno-brand__tag">IT &amp; AI Consulting</span>
         </a>
         <div className={`adno-navlinks${menuOpen ? ' is-open' : ''}`}>
           {NAV.map((link) => (

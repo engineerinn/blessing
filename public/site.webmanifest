@@ -1,0 +1,14 @@
+{
+  "name": "Adnopara — IT & AI Consulting",
+  "short_name": "Adnopara",
+  "description": "Independent IT & AI consulting — retrieval systems, LLM apps, and the backends behind them.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "theme_color": "#0f4d3c",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

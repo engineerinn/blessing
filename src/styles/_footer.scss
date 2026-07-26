@@ -3,6 +3,10 @@
   border-top: 1px solid var(--line);
   padding: clamp(3rem, 5vw, 4rem) 0 2.25rem;
 
+  .adno-brand__logo {
+    height: 52px;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.1fr;

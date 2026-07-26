@@ -8,10 +8,14 @@ export function Nav() {
   return (
     <nav className="adno-nav">
       <div className="adno-wrap adno-nav__inner">
-        <a className="adno-brand" href="#top" onClick={closeMenu}>
-          <span className="adno-brand__mark">
-            Adno<span></span>Para
-          </span>
+        <a className="adno-brand" href="#top" onClick={closeMenu} aria-label="Adnopara — home">
+          <img
+            className="adno-brand__logo"
+            src="/adnopara-wordmark-dark.png"
+            alt="Adnopara"
+            width="480"
+            height="168"
+          />
         </a>
         <div className={`adno-navlinks${menuOpen ? ' is-open' : ''}`}>
           {NAV.map((link) => (

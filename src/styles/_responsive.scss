@@ -1,11 +1,16 @@
 @media (max-width: 900px) {
+  .adno {
+    --nav-h: 74px;
+    --logo-h: 42px;
+  }
+
   .adno-navlinks {
     display: none;
 
     &.is-open {
       display: flex;
       position: absolute;
-      top: 66px;
+      top: var(--nav-h);
       left: 0;
       right: 0;
       flex-direction: column;

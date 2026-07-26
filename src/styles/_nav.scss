@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 66px;
+    height: var(--nav-h);
     gap: 1rem;
   }
 }
@@ -22,6 +22,12 @@
   gap: 0.55rem;
   text-decoration: none;
   color: var(--ink);
+
+  &__logo {
+    display: block;
+    height: var(--logo-h);
+    width: auto;
+  }
 
   &__mark {
     font-weight: 800;

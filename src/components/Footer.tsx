@@ -4,10 +4,15 @@ export function Footer() {
       <div className="adno-wrap">
         <div className="adno-footer__grid">
           <div>
-            <a className="adno-brand" href="#top">
-              <span className="adno-brand__mark">
-                adno<span>·</span>para
-              </span>
+            <a className="adno-brand" href="#top" aria-label="Adnopara — home">
+              <img
+                className="adno-brand__logo"
+                src="/adnopara-wordmark-dark.png"
+                alt="Adnopara"
+                width="480"
+                height="168"
+                loading="lazy"
+              />
             </a>
             <p className="adno-footer__tag">
               Independent IT &amp; AI consulting — retrieval systems, LLM apps, and the backends behind them.

@@ -1,9 +1,15 @@
 import { useState } from 'react'
 import { NAV } from '../data/site'
+import { useActiveSection } from '../hooks/useActiveSection'
+
+// Module scope keeps the array reference stable across renders, so the
+// observer effect inside useActiveSection isn't torn down every paint.
+const SECTION_IDS = NAV.map((l) => l.href.replace('#', ''))
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
+  const active = useActiveSection(SECTION_IDS)
 
   return (
     <nav className="adno-nav">
@@ -18,11 +24,20 @@ export function Nav() {
           />
         </a>
         <div className={`adno-navlinks${menuOpen ? ' is-open' : ''}`}>
-          {NAV.map((link) => (
-            <a key={link.href} className="adno-navlink" href={link.href} onClick={closeMenu}>
-              {link.label}
-            </a>
-          ))}
+          {NAV.map((link) => {
+            const isActive = link.href === `#${active}`
+            return (
+              <a
+                key={link.href}
+                className={`adno-navlink${isActive ? ' is-active' : ''}`}
+                href={link.href}
+                onClick={closeMenu}
+                aria-current={isActive ? 'true' : undefined}
+              >
+                {link.label}
+              </a>
+            )
+          })}
           <a className="adno-btn adno-btn--primary adno-btn--sm" href="#contact" onClick={closeMenu}>
             Book a consult
           </a>

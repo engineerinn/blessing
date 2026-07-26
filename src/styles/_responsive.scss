@@ -21,8 +21,36 @@
       padding: 0.4rem 0;
       box-shadow: 0 12px 24px rgba(15, 34, 41, 0.06);
 
+      // Stacked full-width rows: the desktop underline would stretch edge to
+      // edge, so swap it for a left accent bar on the active item.
       .adno-navlink {
-        padding: 0.85rem clamp(1.25rem, 4vw, 3rem);
+        padding: 0.9rem clamp(1.25rem, 4vw, 3rem);
+        font-size: 1.06rem;
+
+        &::after {
+          left: 0;
+          right: auto;
+          top: 0.55rem;
+          bottom: 0.55rem;
+          width: 3px;
+          height: auto;
+          border-radius: 0 2px 2px 0;
+          transform: scaleY(0);
+          transform-origin: center;
+          transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &:hover::after {
+          transform: scaleY(0);
+        }
+
+        &.is-active {
+          background: rgba(18, 60, 71, 0.045);
+
+          &::after {
+            transform: scaleY(1);
+          }
+        }
       }
 
       .adno-btn {

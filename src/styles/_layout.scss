@@ -7,7 +7,8 @@
 
 .adno-section {
   padding: clamp(3.75rem, 7vw, 6.5rem) 0;
-  scroll-margin-top: 80px;
+  // Keeps anchored headings clear of the fixed nav instead of tucking under it.
+  scroll-margin-top: calc(var(--nav-h) + 16px);
 
   &--mist {
     background: var(--mist-bg);

@@ -19,7 +19,7 @@ export function Contact() {
       '',
       form.message,
     ].filter((l): l is string => Boolean(l) || l === '')
-    window.location.href = `mailto:hello@adnopara.com?subject=${subject}&body=${encodeURIComponent(lines.join('\n'))}`
+    window.location.href = `mailto:contact@adnopara.com?subject=${subject}&body=${encodeURIComponent(lines.join('\n'))}`
   }
 
   return (
@@ -34,8 +34,8 @@ export function Contact() {
           </p>
           <p style={{ marginTop: '1.5rem' }}>
             Prefer email?{' '}
-            <a className="adno-mail" href="mailto:hello@adnopara.com">
-              hello@adnopara.com
+            <a className="adno-mail" href="mailto:contact@adnopara.com">
+              contact@adnopara.com
             </a>
           </p>
         </div>

@@ -20,7 +20,7 @@ export function Footer() {
             <p className="adno-footer__meta">
               개인사업자 · Seoul, Korea
               <br />
-              hello@adnopara.com
+              contact@adnopara.com
             </p>
           </div>
           <div className="adno-footer__col">
